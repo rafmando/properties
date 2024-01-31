@@ -1,0 +1,62 @@
+label {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.flex-item {
+    display: flex;
+}
+
+.multi-filter-container {
+    justify-content: center;
+    align-items: center;
+}
+
+.multi-filter {
+    width: 800px;
+    height: 200px;
+    margin-top: 70px;
+    padding: 20px;
+    border: 2px solid black;
+}
+
+.multi-filter-col {
+    width: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.input-group {
+    margin-top: 20px;
+}
+
+.slider {
+    width: 80%;
+    height: 2px;
+    background-color: rgb(127, 127, 255);
+    margin-top: 20px;
+}
+
+.slider .thumb {
+    width: 23px;
+    height: 23px;
+    cursor: grab;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid rgb(127, 127, 255);
+    top: -10px;
+
+}
+
+.row {
+    justify-content: center;
+}
+
+.search-button {
+    width: 150px;
+    height: 30px;
+    background: none;
+    cursor: pointer;
+    border: 2px solid black;
+  
+}
+
