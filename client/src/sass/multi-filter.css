@@ -57,4 +57,14 @@ label {
   background: none;
   cursor: pointer;
   border: 2px solid black;
+  margin-right: 10px;
+  font: inherit;
+}
+
+.reset-button {
+  height: 30px;
+  background: none;
+  cursor: pointer;
+  border: 2px solid rgb(255, 103, 103);
+  font: inherit;
 }/*# sourceMappingURL=multi-filter.css.map */

@@ -28,22 +28,29 @@ export const MultiFilter = ({
   const [sliderValues, setSliderValues] = useState([MIN, MAX]);
   const currentRadius = sliderValues[1] - sliderValues[0];
 
+  const resetFilter = (e) => {
+    e.preventDefault();
+    setFilteredProperties(properties);
+  };
+
   const handleMultiSearch = (e) => {
     e.preventDefault();
 
-    const updatedItems = filterItems(
-      properties,
-      location,
-      propertyType,
-      minPrice,
-      minBedroom,
-      maxPrice,
-      maxBedroom,
-      currentRadius
-    );
+    if (filterItems.length !== 0) {
+      const updatedItems = filterItems(
+        properties,
+        location,
+        propertyType,
+        minPrice,
+        minBedroom,
+        maxPrice,
+        maxBedroom,
+        currentRadius
+      );
 
-    setFilteredProperties(updatedItems);
-    setFilterActive(true);
+      setFilteredProperties(updatedItems);
+      setFilterActive(true);
+    }
   };
 
   return (
@@ -56,10 +63,11 @@ export const MultiFilter = ({
               <input
                 className="multi-filter-input"
                 onChange={(e) => setLocation(e.target.value)}
+                aria-label="location"
               />
             </div>
             <div className="input-group">
-              <label>Radius: {currentRadius}</label>
+              <label data-testid="radius">Radius: {currentRadius}</label>
               <div style={{ marginLeft: "15px" }}>
                 {sliderValues[0]} - {sliderValues[1]}
               </div>
@@ -81,6 +89,7 @@ export const MultiFilter = ({
                 name="property-type"
                 id="property-type "
                 onChange={(e) => setPropertyType(e.target.value)}
+                data-testid="property-type"
               >
                 {propertyTypeOptions.map((option) => {
                   return (
@@ -97,6 +106,7 @@ export const MultiFilter = ({
                 name="min-price"
                 id="min-price"
                 onChange={(e) => setMinPrice(e.target.value)}
+                data-testid="min-price"
               >
                 {buyPropertyPriceOptions.map((option) => {
                   return (
@@ -111,6 +121,7 @@ export const MultiFilter = ({
                 name="max-price"
                 id="max-price"
                 onChange={(e) => setMaxPrice(e.target.value)}
+                data-testid="max-price"
               >
                 {buyPropertyPriceOptions.map((option) => {
                   return (
@@ -127,6 +138,7 @@ export const MultiFilter = ({
                 name="min-bedroom"
                 id="min-bedroom"
                 onChange={(e) => setMinBedroom(e.target.value)}
+                data-testid="min-bedroom"
               >
                 {bedroomOptions.map((option) => {
                   return (
@@ -141,6 +153,7 @@ export const MultiFilter = ({
                 name="max-bedroom"
                 id="max-bedroom"
                 onChange={(e) => setMaxBedroom(e.target.value)}
+                data-testid="max-bedroom"
               >
                 {bedroomOptions.map((option) => {
                   return (
@@ -165,9 +178,15 @@ export const MultiFilter = ({
           <button
             className="search-button"
             onClick={(e) => handleMultiSearch(e)}
+            data-testid="search-button"
           >
             Search
           </button>
+          {filteredProperties.length === 0 ? (
+            <button className="reset-button" onClick={(e) => resetFilter(e)}>
+              Reset filter
+            </button>
+          ) : null}
         </div>
       </form>
     </div>
