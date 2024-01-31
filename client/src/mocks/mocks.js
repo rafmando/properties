@@ -6,6 +6,16 @@ export const mockProperties = [
     postcode: "SW16 9JF",
     price: 400000,
   },
+
+  {
+    name: "1 bedroom house",
+    address: "21 Alfum Road",
+    location: "London",
+    postcode: "E1 FRT",
+    price: 100000,
+    type: "house",
+    bedrooms: 1,
+  },
 ];
 
 export const mockFilteredProperties = [
