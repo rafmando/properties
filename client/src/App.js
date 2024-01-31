@@ -39,7 +39,7 @@ function App() {
         filterActive={filterActive}
         setFilterActive={setFilterActive}
       />
-      {filterActive == false ? (
+      {filterActive === false ? (
         <ResultsList properties={properties} search={search} />
       ) : (
         <MultiFilterResults filteredProperties={filteredProperties} />

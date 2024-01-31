@@ -22,7 +22,11 @@ export const ResultsList = ({ properties, search }) => {
             .map((property) => {
               return (
                 <div key={property.address} className="result-card">
-                  <img className="result-card-img" src="images/house.jpg"></img>
+                  <img
+                    className="result-card-img"
+                    src="images/house.jpg"
+                    alt=""
+                  ></img>
                   <p>Name: {property.name}</p>
                   <p>Address: {property.address}</p>
                   <p>Price: £{property.price}</p>
