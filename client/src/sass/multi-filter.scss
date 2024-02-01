@@ -1,3 +1,6 @@
+$lightViolet: rgb(127, 127, 255); 
+$redishPink : rgb(255, 103, 103);
+
 label {
     margin-right: 15px;
     margin-left: 15px;
@@ -32,7 +35,7 @@ label {
 .slider {
     width: 80%;
     height: 2px;
-    background-color: rgb(127, 127, 255);
+    background-color: $lightViolet;
     margin-top: 20px;
 }
 
@@ -42,7 +45,7 @@ label {
     cursor: grab;
     background: white;
     border-radius: 50%;
-    border: 2px solid rgb(127, 127, 255);
+    border: 2px solid $lightViolet;
     top: -10px;
 
 }
@@ -67,7 +70,7 @@ label {
     height: 30px;
     background: none;
     cursor: pointer;
-    border: 2px solid rgb(255, 103, 103);
+    border: 2px solid $redishPink;
     font: inherit;
     
   
