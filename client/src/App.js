@@ -9,7 +9,7 @@ import MultiFilterResults from "./components/multi-filter-results/multi-filter-r
 function App() {
   const [search, setSearch] = useState("");
   const [properties, setProperties] = useState([]);
-  const [filteredProperties, setFilteredProperties] = useState([]);
+  const [filteredProperties, setFilteredProperties] = useState(["not empty"]);
   const [filterActive, setFilterActive] = useState(false);
 
   const fetchAllProperties = async () => {
