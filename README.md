@@ -1,4 +1,5 @@
-Properties
+# PROPERTIES
+
 <img src="client/public/images/properties-pic.PNG">
 
 ## Run the app in code editor
