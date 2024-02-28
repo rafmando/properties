@@ -1,5 +1,5 @@
 Properties
-<img src="public/images/properties-pic.png">
+<img src="public/images/properties-pic.PNG">
 
 ## Run the app in code editor
 
