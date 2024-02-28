@@ -1,3 +1,6 @@
+Properties
+<img src="public/images/properties-pic.png">
+
 ## Run the app in code editor
 
 1. CD in to server & run server
